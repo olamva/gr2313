@@ -1,0 +1,8 @@
+image: maven:3.8.3-openjdk-17
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - "cd booking; mvn clean install -U --batch-mode -PskipUITests"
